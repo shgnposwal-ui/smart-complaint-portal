@@ -3,6 +3,7 @@ package com.smartcomplaint.smartcomplaintportal.mapper;
 import com.smartcomplaint.smartcomplaintportal.dto.UserRegistrationDto;
 import com.smartcomplaint.smartcomplaintportal.dto.UserResponseDto;
 import com.smartcomplaint.smartcomplaintportal.entity.User;
+import com.smartcomplaint.smartcomplaintportal.dto.ProfileResponseDto;
 
 public class UserMapper {
 
@@ -53,6 +54,21 @@ public class UserMapper {
                 .pincode(user.getPincode())
                 .role(user.getRole())
                 .isActive(user.getIsActive())
+                .build();
+    }
+    public static ProfileResponseDto toProfileResponseDto(User user) {
+
+        return ProfileResponseDto.builder()
+                .id(user.getId())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .email(user.getEmail())
+                .phoneNumber(user.getPhoneNumber())
+                .address(user.getAddress())
+                .city(user.getCity())
+                .state(user.getState())
+                .pincode(user.getPincode())
+                .role(user.getRole())
                 .build();
     }
 }

@@ -1,0 +1,24 @@
+package com.smartcomplaint.smartcomplaintportal.dto;
+
+import com.smartcomplaint.smartcomplaintportal.entity.Role;
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class LoginResponseDto {
+
+    private String token;
+
+    private String tokenType;
+
+    private Long userId;
+
+    private String fullName;
+
+    private String email;
+
+    private Role role;
+}
