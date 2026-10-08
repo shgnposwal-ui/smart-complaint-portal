@@ -81,7 +81,7 @@ public class SecurityConfig {
 
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:5173",
-                "https://smart-complaint-frontend-production.up.railway.app"
+                "https://smart-complaint-frontend-dg14.onrender.com"
         ));
 
         configuration.setAllowedMethods(List.of(
